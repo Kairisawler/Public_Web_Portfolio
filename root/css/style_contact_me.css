@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*
+   Author: 
+   Modified By: 
+   Date:
+   
+   Filename: 
+
+*/
+html {
+	background-image: url("../photos/background_code.png"), url("../photos/background_score.png"),
+		linear-gradient(to right, rgba(180, 255, 240, 1), rgba(188, 170, 255, 1));
+	background-position: left,
+		right;
+	background-repeat: no-repeat,
+		no-repeat,
+		repeat-y;
+}
+
+body {
+	display: block;
+	background-color: white;
+	margin: 15px auto;
+	border: 0.5em groove #6d066d;
+	border-radius: 2.0em;
+	padding: 15px;
+	max-width: 820px;
+}
+/* Nav Bar Styles */
+nav {
+	display: inline-block;
+	background-color: white;
+	margin-left: -23px;
+	margin-right: -23px;
+	margin-top: -40px;
+	border: 0.5em groove #6d066d;
+	border-radius: 2.0em;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: -23px;
+	margin-right: 55px;
+	margin-top: -40px;
+	margin-bottom: -40px;
+}
+
+a {
+	display: inline-block;
+	padding-right: -8px;
+	padding-left: -8px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+
+}
+
+#button_souncloud {
+	display: inline-block;
+	float: left;
+}
+
+#nav_search {
+	display: inline-block;
+	float: right;
+}
+
+h2, h3 {
+	text-align: center;
+}
+/* ... Styles */
+
+/* ... Styles */
+
+/* footer Styles */
+footer {
+	display: block;
+	text-align: center;
+	background-color: white;
+	margin-left: -23px;
+	margin-right: -23px;
+	margin-bottom: -23px;
+	border: 0.5em groove #6d066d;
+	border-radius: 2.0em;
+	padding: 5px;
+	clear: both;
+}
+
+/* End of Document */
+
+#contact_me_banner_aj2 {
+	max-width: 820px;
+	margin-top: 20px;
+}
+
+#contact_me_section_form {
+	display: block;
+	float: left;
+	margin-left: 40px;
+}
+
+#contact_me_section_form input {
+	float: right;
+}
+
+#contact_me_section_form label {
+	float: left;
+	padding-bottom: 3px;
+}
+
+#contact_me_bullet {
+	display: block;
+	float: right;
+	max-width: 400px;
+	margin-right: 40px;
+	margin-top: -18px;
+}

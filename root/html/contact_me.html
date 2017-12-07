@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+	Website: Kairi Sawler -- Portfolio
+	Webpage: Contact Me Page
+	Author: Kai Sawler
+	Date: November 30th 2017
+	Filename: contact_me.html
+	Supporting files: style_contact_me.css, layout_contact_me.css
+-->
+	<meta charset="utf-8">
+	<title>Contact Me</title>
+
+	<link href="../css/layout_contact_me.css" rel="stylesheet"/>
+	<link href="../css/style_contact_me.css" rel="stylesheet" />
+
+	<script src="../media/stringReverse.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+		function showEM(userName, emServer) {
+		/*
+			Displays a link to the user's e-mail address.
+		*/
+			userName = stringRev(userName);
+			emServer = stringRev(emServer);
+			
+			var emLink = userName + "@" + emServer;
+			document.write("<a href='mailto:" + emLink + "'>");
+			document.write(emLink);
+			document.write("</a>");	
+		}
+	</script>
+</head>
+
+<body>
+	<header>
+		<section id="nav">
+        <figure id="logo">
+        <!-- <img src="" alt="" /> -->
+        </figure>
+		<nav id="main">
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../html/about_me.html">About Me</a></li>
+				<li><a href="../html/resume.html">Resume</a></li>
+				<li><a href="../html/skills.html">Skills</a></li>
+				<li><a href="../html/web_development.html">Web Development</a></li>
+				<li><a href="../html/programming.html">Programming</a></li>
+				<li><a href="../html/music.html">Music</a></li>
+				<li><a href="../html/contact_me.html">Contact Me</a></li>
+			</ul>
+			<button class="button_soundcloud">Soundcloud</button>
+			<form class="nav_search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>	
+			</form>
+		</nav>
+        </section>
+		<h2><strong>Contact Me</strong></h2>
+	</header>
+	
+	<section id="contact_me_introduction">
+		<h3></h3>
+		<p>If you'd like to get in touch with me, either for business inquiries or general comments; please fill out the form below!</p>
+	</section>
+	
+	<script id="contact_me_alert">
+		function show_alert() {
+		alert("You've successfully submitted your comments!");
+		}
+	</script>
+	<h2></h2>
+    <section id="contact_me_section_form">
+		<form id="contact_form" name="contact_form" method="GET" action="contact_me_output.html"/>
+		
+		<fieldset="conForm">
+			<legend></legend>
+			
+			<label for="fName">Name, or Alias:</label>
+			<input name="fName" id="fName" type= "text"/><br />
+				
+			<label for="conReturn">E-mail (required):</label>
+			<input name="conReturn" id="conReturn" type="text" :required /><br />
+			<!-- Sets the date of visit default to current date -->
+			<script>
+			$(document).ready( function() {
+				var now = new Date();
+				var month = (now.getMonth() + 1);
+				var day = now.getDate();
+				if(month < 10) 
+					month = "0" + month;
+				if(day < 10) 
+					day = "0" + day;
+				var today = now.getFullYear() + '-' + month + '-' + day;
+				$('#datePicker').val(today);
+			});
+			</script>
+			
+			<label for="visit"> Date of visit:</label>
+			<input name="stuvisit" id="visit" type="date" default="today" /><br />
+			
+			<br />
+			<legend>Comments (required):</legend>
+			
+			<textarea name="comments" :required id="comments" accesskey="p" rows="6" cols="40" maxlength="1000" ></textarea><br />
+			
+			<input type="submit" value="Submit My Information" onclick="show_alert();"/>
+			<input type="reset" value="Cancel"/>
+		</fieldset>	
+
+    </section>
+	
+	<section id="contact_me_bullet">
+		<h3>General Information:</h3>
+		<ul>
+			<li>I can be reached by e-mail at: <script type="text/javascript">showEM("relwasiriak", "moc.liamg")</script></li>
+			<li>I can be reached by phone at: <a href="tel:19025992728">+1 (902) 599-2728</a></li>
+			<li>I will generally return e-mails and phone calls between the hours of 08:00 &#38; 16:00 AST/ADT</li>
+			<li>While I conduct all my work, and approach all business inquiries with the intent to earn a living; I do occationally produce work for free for projects I have a vested interest in.</li>
+			
+		</ul>
+	</section>
+	
+	<section id="contact_me_banner_aj2_section">
+		<img src="../photos/aj2_banner.png" alt="Adventurer's Journey II - Banner" id="contact_me_banner_aj2" usemap="#contact_me_map" />
+		<map name="contact_me_map" >
+			<area shape="rect" coords="0, 0, 940, 175" alt="This is an Image Map!" href="http://store.steampowered.com/app/277840/RPG_Maker_VX_Ace__The_Adventurers_Journey_2/" />
+		</map>
+	</section>
+		
+    <footer>&#47;&#60;&#32;&#32;<strong>Kairi&#32;Sawler</strong>&#32;&#32;&#35;&#32;&#32;<strong>Lawrencetown&#32;NS</strong>&#44;&#32;&#32;<strong>Canada</strong>&#32;&#32;&#9839;&#9833;&#32;&#32;&#43;&#32;&#32;<strong>1&#32;&#40;902&#41;&#32;599&#45;2728</strong>&#32;&#32;&#9834;  <strong>kairisawler&#64;gmail.com</strong>&#32;&#32;&#9835;</footer>
+</body>
+</html>
